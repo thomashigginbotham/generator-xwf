@@ -1,0 +1,30 @@
+/* ================================
+ * Default CSS Overrides
+ * ================================ */
+
+body {
+	margin: 0 $page-margin;
+	color: #000;
+	background-color: #fff;
+}
+
+// No top margins on headers and paragraphs makes for easier
+// vertical alignment with other elements
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;
+}
+
+// Monospace font reset
+pre,
+code,
+kbd,
+samp,
+tt {
+	font-family: monospace, monospace;
+	font-size: .9em;
+}
+
+// No borders on <img>
+img {
+	border-width: 0;
+}

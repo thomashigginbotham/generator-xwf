@@ -1,0 +1,50 @@
+<!doctype html>
+<!--[if lt IE 9]><html class="lt-ie9"><![endif]-->
+<!--[if !(lt IE 9)]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!--<![endif]-->
+	<head>
+		<title>Starter Page | <%= _.capitalize(appName) %></title>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<!-- build:remove -->
+		<link rel="stylesheet" href="/bower_components/normalize-css/normalize.css"/>
+		<!-- /build -->
+		<link rel="stylesheet" href="/stylesheets/main.css"/>
+
+		<!--[if lt IE 9]>
+		<script src="/javascripts/vendor/html5shiv.min.js"></script>
+		<![endif]-->
+
+		<!-- build:js /javascripts/built.js -->
+		<script data-main="/javascripts/main" src="/bower_components/requirejs/require.js"></script>
+		<!-- /build -->
+	</head>
+
+	<body>
+		<div class="page-wrapper">
+			<header class="site-header">
+				<h1><a href="#"><%= _.capitalize(appName) %></a></h1>
+
+				<nav class="site-nav">
+					<ul>
+						<li><a href="#">Some</a></li>
+						<li><a href="#">Navigation</a></li>
+						<li><a href="#">Items</a></li>
+					</ul>
+				</nav>
+			</header>
+
+			<main>
+				<article>
+					<h1>Page Heading</h1>
+					<p>This is a simple starter page. Edit this HTML markup in <i>app/index.html</i> to suit your needs.</p>
+				</article>
+			</main>
+
+			<footer class="site-footer">
+				<!-- Footer content here -->
+			</footer>
+		</div>
+	</body>
+</html>
