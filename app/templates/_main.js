@@ -6,11 +6,13 @@
 requirejs.config({
 	baseUrl: '/javascripts/',
 	paths: {
-		'jquery': '../bower_components/jquery/dist/jquery',
-		'samplePlugin': 'lib/jquery-plugins/jquery.sampleplugin'
+		samplePlugin: 'lib/jquery-plugins/jquery.sampleplugin',
+		jquery: '../bower_components/jquery/dist/jquery',
+		requirejs: '../bower_components/requirejs/require'
 	},
-	// Remove the following to enable caching
-	'urlArgs': 'cachebust=' + new Date().getTime()
+	packages: [
+
+	]
 });
 
 /* -- Initialize App (app.js) -- */

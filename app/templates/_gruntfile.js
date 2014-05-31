@@ -65,6 +65,14 @@ module.exports = function(grunt) {
 				}
 			}
 		},
+		bower: {
+			target: {
+				rjsConfig: 'app/javascripts/main.js',
+				options: {
+					exclude: ['html5shiv', 'selectivizr']
+				}
+			}
+		},
 		requirejs: {
 			compile: {
 				options: {
