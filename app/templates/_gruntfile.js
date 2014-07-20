@@ -80,7 +80,7 @@ module.exports = function(grunt) {
 					mainConfigFile: 'app/javascripts/main.js',
 					name: 'app',
 					out: 'dist/javascripts/built.js',
-					include: ['../bower_components/requirejs/require'],
+					include: ['../bower_components/almond/almond.js'],
 					findNestedDependencies: true,
 					optimize: 'uglify2',
 					generateSourceMaps: true,
