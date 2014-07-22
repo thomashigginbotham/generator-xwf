@@ -5,6 +5,8 @@
 
 ## Getting Started
 
+This is the Yeoman generator for Experis Web Framework (XWF), a responsive framework built with Sass and RequireJS. For more information on XWF, check out the [GitHub repository](https://github.com/thomashigginbotham/ExperisWebFramework2).
+
 ### What is Yeoman?
 
 Trick question. It's not a thing. It's this guy:
