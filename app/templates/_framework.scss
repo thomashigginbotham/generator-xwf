@@ -127,7 +127,7 @@ $col-gutter: 1.4rem !default;      // Column gutter width (for newer browsers)
 	}
 }
 
-/* @mixin center-column(number, [number])
+/* @mixin center-column(number[, number])
  * Desc: If a row contains a single column, it can be centered with this mixin.
  * $col-span: How many column lengths this cell will span across.
  * $custom-col-count (optional): The total number of columns in the row.
@@ -140,6 +140,34 @@ $col-gutter: 1.4rem !default;      // Column gutter width (for newer browsers)
 	        box-sizing: border-box;
 
 	margin: 0 auto;
+}
+
+/* @mixin push(number[, number, number])
+ * Desc: Moves a column to the right by the provided number of column lengths
+ * $col-span: How many column lengths this cell will move.
+ * $custom-col-count (optional): The total number of columns in the row.
+ * $custom-col-gutter (optional): Width of gutters.
+ */
+@mixin push($col-span, $custom-col-count: $col-count, $custom-col-gutter: $col-gutter) {
+	$push-ratio: $col-span / $custom-col-count;
+	margin-left: $push-ratio * 100% + ($push-ratio * $col-gutter-fluid);
+	margin-left: calc(#{$push-ratio * 100%} + ($push-ratio * #{$custom-col-gutter}));
+	margin-right: ($push-ratio * 100% + ($push-ratio * $col-gutter-fluid)) * -1 + $col-gutter-fluid;
+	margin-right: calc((#{$push-ratio * 100%} + ($push-ratio * #{$custom-col-gutter})) * -1 + #{$custom-col-gutter});
+
+	&:last-child {
+		float: left;
+	}
+}
+
+/* @mixin pull(number[, number, number])
+ * Desc: Moves a column to the left by the provided number of column lengths
+ * $col-span: How many column lengths this cell will move.
+ * $custom-col-count (optional): The total number of columns in the row.
+ * $custom-col-gutter (optional): Width of gutters.
+ */
+@mixin pull($col-span, $custom-col-count: $col-count, $custom-col-gutter: $col-gutter) {
+	@include push($col-span * -1, $custom-col-count, $custom-col-gutter);
 }
 
 /* @mixin convert-to-single-cols([margin value])
